@@ -1,0 +1,134 @@
+/* Container styling with increased size */
+.container {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #07104e 0%, #050008 100%);
+}
+
+/* Box container */
+.box {
+  margin-top: 20px;
+}
+
+/* Paper styling */
+.paper {
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 128, 0.37);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Task list paper styling */
+.task-list-paper {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  min-height: 200px;
+  overflow: visible;
+  background: linear-gradient(135deg, #0a124e 0%, #02020a 100%) !important;
+  border-radius: 12px;
+}
+
+
+/* Global styling for html and body */
+html, body {
+  height: auto;
+  min-height: 100vh;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  background: #0d0e10;
+}
+
+/* Default heading style */
+h4 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  color: #ff6666;;
+  text-shadow: 2px 2px 4px rgba(231, 117, 117, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .container {
+    padding: 30px;
+    gap: 25px;
+  }
+  
+  .paper {
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  .task-list-paper {
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  h4 {
+    font-size: 2rem;
+    color: #ff6666; /* Keep the same light red color */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .paper {
+    padding: 15px;
+  }
+  
+  .task-list-paper {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  h4 {
+    font-size: 2rem;
+    color: #ff6666; /* Keep the same light red color */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+    gap: 15px;
+  }
+  
+  .paper {
+    padding: 10px;
+  }
+  
+  .task-list-paper {
+    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+    color: #ff6666; /* Keep the same light red color */
+  }
+}

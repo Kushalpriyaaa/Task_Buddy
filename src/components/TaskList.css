@@ -1,0 +1,156 @@
+/* Container for the filter buttons and sorting */
+body {
+  background-color: blue;
+  color: white; /* Default text color */
+}
+
+.task-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: nowrap;
+  padding: 100px;
+  background-color: rgb(17, 17, 73); /* Updated to blue */
+}
+/* Each task section (To Do, Active, Completed) */
+/* Each task section */
+.task-section {
+  width: 400px;
+  min-height: 400px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgb(220, 220, 223) !important; /* Light transparent white for contrast */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  color: rgb(185, 116, 116); /* Ensuring text remains visible */
+}
+/* Keep the date text white */
+.date-text {
+  color: rgb(125, 45, 45) !important;
+  font-weight: bold;
+}
+
+
+/* Sort dropdown positioned to the right */
+.sort-control {
+  position: fixed;
+  top: -5px;
+  left: 9px;
+  min-width: 150px;
+  background-color: white;
+  box-shadow: 0px -1px 6px rgba(255, 255, 255, 1) !important;
+  color: black;
+  padding: 8px;
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+  
+
+
+/* Task section titles */
+.task-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white; /* Keeping title background white */
+  color: black; /* Ensuring title text is readable */
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.filter-sort-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px;
+  
+}
+
+/* Make sure task items remain visible */
+.task-item {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2); /* Transparent white for contrast */
+  border-radius: 5px;
+  margin-bottom: 8px;
+  color: white;
+}
+
+/* Ensuring the date inside tasks stays white */
+.task-date {
+  color: rgb(16, 15, 15) !important;
+  font-weight: bold;
+}
+@media (max-width: 1024px) {
+  .task-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+}
+
+/* For screens up to 768px */
+@media (max-width: 768px) {
+  .task-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px; /* Space between sections */
+    
+  }
+  
+  .task-section {
+    width: 50px; /* Make sections more responsive */
+    min-width: 90%;
+    margin: 0; /* Remove margin for better alignment */
+    padding: 150px; /* Adjust padding for smaller screens */
+  
+  }
+  
+  .header-section, .filter-sort-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+/* For screens up to 480px - Enable horizontal scrolling for task sections */
+@media (max-width: 40px) {
+  .task-container {
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;  /* Snap scrolling for better UX */
+    -webkit-overflow-scrolling: touch;
+    padding: 20px;
+  }
+  
+  .task-section {
+    width: 10%;
+    min-width: 90%;
+    scroll-snap-align: start;
+    margin-right: 10px;  /* Spacing between sections */
+  }
+  
+  .filter-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sort-section {
+    width: 10%;
+    text-align: center;
+    justify-content: center;
+  }
+}

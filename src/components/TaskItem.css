@@ -1,0 +1,180 @@
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  min-width: 380px;
+  max-width: 100%;
+  min-height: 50px; /* Fixed height for task items */
+  overflow: hidden;
+  position: relative; /* Enable absolute positioning for children */
+  left: 1px; /* Adjust as needed */
+}
+/* Ensures checkbox and text are properly aligned */
+.task-item .task-content {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+/* Checkbox styling */
+.task-checkbox {
+  margin-right: 50px;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* Task text */
+.task-text {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #0a0404;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-weight: 600; /* Changed from bold to 900 for extra boldness */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.5px; /* Added for better readability */
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: black;
+  font-weight: 400; /* Keep the same boldness when completed */
+}
+
+/* Task priority label positioned at the top-right corner */
+.task-priority {
+  position: absolute;
+  top: 1px;
+  right: 90px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.task-priority.high {
+  color:green;
+}
+
+.task-priority.medium {
+  color: orange;
+}
+
+.task-priority.low {
+  color: rgb(238, 55, 14);
+}
+
+/* Task due date positioned at the top-left corner */
+.task-date {
+  position: absolute;
+  top: -5px;
+  right: 1px;
+  font-size: 14px;
+  color: black ;
+}
+/* Delete button */
+.task-delete-btn {
+  color: #ff4d4d;
+  font-size: 14px;
+  cursor: pointer;
+  bottom:-18px; /* Adjust as needed */
+  left: 35px; /* Adjust as needed */
+}
+
+.task-delete-btn:hover {
+  color: #ff0000;
+}
+
+/* Edit button */
+.task-edit-btn {
+  color: #00ffcc;
+  font-size: 14px;
+  cursor: pointer;
+  bottom: -18px;
+  left: 60px;
+  margin-right: 15px;
+}
+
+.task-edit-btn:hover {
+  color: #a5b2b0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    margin: 5px;
+    width: 40%; /* Change from 100% to 90% to add some margin on sides */
+    min-width: 270px;
+    height:82px;
+    min-height: 10px;;
+    left: 49%; /* Keep the 50% */
+    transform: translateX(-50%); /* Keep the transform */
+    background-color: #fff;
+  }
+  
+   .task-content {
+    width: 80%;
+    flex-direction: column;
+    align-items: center; /* Changed from flex-start to center */
+    justify-content: center; /* Added to center vertically */
+    gap: 5px;
+    margin: 0 auto; /* Added to center horizontally */
+  }
+  
+ 
+  .task-text {
+    position: relative;
+    margin-left: 40px;
+    top: -15px;
+    right: 90px;
+    margin-bottom: 5px;
+    font-weight: 1000; /* Maintain boldness in mobile view */
+  }
+  .task-checkbox {
+    position: relative; /* Change from absolute to relative */
+    top: 45px; /* Adjusted to align with text */
+    right: 0; /* Center the checkbox horizontally */
+    left: 60px;
+    margin: 0 10px 0 0; /* Adjust margins as needed */
+    /* Optionally adjust width/height if necessary */
+  }
+  
+  .task-priority {
+    position: relative;
+    top: -71px;
+    right: -98px;
+    margin-bottom: 5px;
+  }
+  
+  .task-date {
+    position: relative;
+    top: -70px;
+    right: -100px;
+    color: #ff0000;
+  }
+  
+  .task-edit-btn {
+    position: relative;
+    bottom: 70px;
+    left: 120px;
+    margin-top: 8px;
+    margin-right: 15px;
+  }
+  
+  .task-delete-btn {
+    position: relative;
+    bottom: 105px;
+    left: 75px;
+    margin-top: 8px;
+  }
+}

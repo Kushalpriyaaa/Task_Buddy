@@ -1,0 +1,111 @@
+/* TaskForm.css */
+.task-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+ 
+  padding: 15px;
+  background: linear-gradient(145deg, #121152, #0f0c19);
+  box-shadow: 5px 5px 10px rgba(43, 23, 129, 0.2), 
+              -5px -5px 10px rgba(42, 34, 125, 0.8);
+  border-radius: 12px;
+}
+
+/* Input Field */
+.task-form .MuiTextField-root {
+  flex-grow: 1;
+  position: relative;
+
+
+
+  border-radius: 8px;
+  background:  rgb(219, 216, 216) !important;
+  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1),
+              inset -3px -3px 6px rgba(33, 39, 69, 0.7);
+}
+
+/* Dropdown (Priority) */
+.task-form .MuiFormControl-root {
+  position: relative;
+  top: -20px; /* Adjust this value as needed */
+
+  min-width: 120px;
+  border :2px;
+  top:-0px;
+  background: rgb(219, 216, 216);
+  border-radius: 0px;
+  box-shadow: px 3px px rgba(55, 255, 255, 0.1),
+              -3px -3px 6px rgba(255, 255, 255, 0.7);
+              border-radius: 6px;
+}
+
+/* 3D Button Styling */
+.task-form .MuiButton-root {
+  height: 50px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: linear-gradient(145deg,);
+  color: white;
+  font-weight: bold;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2),
+              -4px -4px 6px rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Button Hover Effect */
+.task-form .MuiButton-root:hover {
+  background: linear-gradient(145deg, #0056b3, #004093);
+  box-shadow: 2px 2px px rgba(0, 0, 0, 0.3),
+              -2px -2px 5px rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Button Active (Click) Effect */
+.task-form .MuiButton-root:active {
+  
+  transform: translateY(1px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .task-form {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .task-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .task-form .MuiTextField-root,
+  .task-form .MuiFormControl-root,
+  .task-form .MuiButton-root {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-form {
+    padding: 8px;
+  }
+
+  .task-form .MuiTextField-root,
+  .task-form .MuiFormControl-root,
+  .task-form .MuiButton-root {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .task-form .MuiButton-root {
+    height: 45px;
+    padding: 8px;
+  }
+}
