@@ -19,6 +19,6 @@
 # 3. Start the development server:
    npm run dev 
 
-# 4. Open the application in your browser at http://localhost:5179/ (vite)
+# 4. Open the application in your browser at [https://task-buddy-4git6js2y-kushalpriyaaas-projects.vercel.app/]
 
 
